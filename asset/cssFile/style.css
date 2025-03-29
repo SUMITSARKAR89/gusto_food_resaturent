@@ -1,0 +1,1369 @@
+  /* ----------------------------------------
+============= custom css  ==============
+-------------------------------------------*/
+/* https://www.youtube.com/watch?v=0p-Rye_f0EA&t=779s */
+.lightmood{
+
+    --background-color: #0f110c;
+    --background-color-two:#fffcf3;
+    --card-background:#F4F0E5;
+
+    --text-color: #fffcf3;
+    --text-color-two: #0f110c;
+
+    --extra-color: #00000041;
+   
+    /* gradient color  */
+    
+    --gradient-1: linear-gradient(120deg, #7a93b826, #7a93b808);
+    --gradient-2: 	#ffffff;
+    --gradient-3: linear-gradient(360deg, #84b0f5, #7a93b8BF);
+   
+    /*others color*/
+    --scrollbar-color: 	#9097a2;
+    --scrollbar-thump: 	#3a3e45;
+    --scrollbar-hover: 	#272a2f;
+
+   
+    
+ }
+ :root{
+     /* background color  */
+     
+     
+    --background-color: #fffcf3;
+    --background-color-two:#0f110c;
+    --card-background: #161813;
+
+    --text-color: #0f110c;
+    --text-color-two: #fffcf3;
+
+    --extra-color: #f1eedd;
+   
+    
+
+     
+     /* gradient color  */
+     
+     --gradient-1: linear-gradient(120deg, #7a93b826, #7a93b808);
+     --gradient-2: #7a93b81A;
+     --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
+     
+    
+     /*others color*/
+     --scrollbar-color: #263040;
+     --scrollbar-thump: #84b0f5;
+     --scrollbar-hover: #6f89b6;
+    
+     /* transition  */
+     --transition-1: 0.25s ease;
+     --transition-2: 0.5s ease;
+     
+ 
+      /* fontsize  */
+
+      --font-h1: 48px;
+      --font-h2: 45px;
+      --font-h3: 32px;
+      --font-h4: 22px;
+      --font-h5: 20px;
+
+      --font-14: 14px;
+      --font-15: 15px;
+      
+
+
+      /* font-weight  */
+     
+
+      /* z-index  */
+      --z-minus:-1;
+      --z-zero:0;
+      --z-low:1;
+      --z-high:10;
+      --z-100:100;
+      --z-tooltop:1000;
+      --z-fix:1100;
+      --z-overlay:1110;
+      --z-modal:1990;
+      --z-max:9999;
+
+ 
+     }
+ 
+  /* ----------------------------------------
+ ============= reset css  ==============
+-------------------------------------------*/
+       *,
+       *::after,
+       *::before{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+   
+       }
+       li{
+           list-style: none;
+       }
+   
+       a,
+       img,
+       input,
+       button,
+       i{
+           display: block;
+           text-transform: capitalize;
+       }
+       button{
+        background: none;
+        border: 0;
+        outline: 0;
+        color: var(--text-color);
+        cursor: pointer;
+       }  
+
+       a{
+        text-decoration: none;
+      }
+    img{
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+   
+    html{
+        scroll-behavior: smooth;
+       
+    }
+    body{
+        max-width: 100%;
+        width: 98.5%;
+        height: auto;
+        margin: 10px auto;
+        font-family: "Figtree", sans-serif;
+        font-size: var(--font-14);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        position: relative;
+        
+        transition:  all 0.3s ease-in-out;
+        overflow-X: hidden; 
+        animation: fadeed 0.5s ease-in-out;
+    }
+
+    @keyframes fadeed {
+        from{transform: translateY(20px); opacity: 0;}
+        to{transform: translateY(0px); opacity: 1;}
+            
+    }
+    @keyframes next1{
+        from{
+            left: 0%
+        }
+        to{
+            left: -100%;
+        }
+    }
+    @keyframes next2{
+        from{
+            left: 100%
+        }
+        to{
+            left: 0%;
+        }
+    }
+    
+    @keyframes prev1{
+        from{
+            left: 0%
+        }
+        to{
+            left: 100%;
+        }
+    }
+    @keyframes prev2{
+        from{
+            left: -100%
+        }
+        to{
+            left: 0%;
+        }
+    }
+    
+    
+   
+    
+/* ============----page scroll bar-----============== */
+#indexMenu .index-right::-webkit-scrollbar,
+#indexMenu .menu-right::-webkit-scrollbar { 
+        width: 2px;   
+    }
+
+    #indexMenu .index-right::-webkit-scrollbar-track,  
+    #indexMenu .menu-right::-webkit-scrollbar-track { 
+        overflow: hidden;
+        background-color: var(--scrollbar-color);
+    }
+
+    #indexMenu .index-right::-webkit-scrollbar-thumb, 
+    #indexMenu .menu-right::-webkit-scrollbar-thumb {
+   
+    border-radius:100px;
+    background-color: var(--scrollbar-thump);
+    transition: 0.3s;
+    cursor: grabbing;
+   
+  }
+  #indexMenu .index-right::-webkit-scrollbar-thumb:hover,
+  #indexMenu .menu-right::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scrollbar-hover);
+  } 
+  
+  /* =====================others=========================== */
+  .container{
+   max-width: 100%;
+  
+   
+  }
+  section, footer{
+   margin: 2% 13%;
+   max-width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4, 
+  h5{
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 700;
+  }
+   /* <!-- =================================================
+  --------------header start here------------------
+  =================================================   --> */
+  header{
+    position: fixed;
+    width: 450px;
+    max-width: 100%;
+    z-index: 3;
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding:5px 15px;
+    top: 0;
+    left: 10px;
+    border-radius:0 0 30px 0;
+  }
+  header::after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 50px;
+    background-color: var(--background-color);
+    bottom: 35px;
+    border-bottom-left-radius: 30px;
+    right: -15px;
+    
+    box-shadow:  -20px 30px 0 var(--primary-c);
+    transform: rotate(-90deg);
+  }
+  header::before{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 50px;
+    background-color: var(--background-color);
+    top: 12px;
+    border-bottom-left-radius: 32px;
+    left: -41px;
+    box-shadow:  -10px 30px 0 var(--primary-c);
+    transform: rotate(-90deg);
+  }
+  header .logo{
+    padding: 5px;
+    position: relative;
+  }
+  header .logo a{
+    font-size: var(--font-h4);
+    font-family: "Sorts Mill Goudy", serif;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-1);
+    opacity: 1;
+  }
+  header .logo a:hover{
+    opacity: 0.8;
+  }
+  header nav{
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav a{
+    font-size: var(--font-14);
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 1;
+    transition: var(--transition-1);
+    text-transform: capitalize;
+    padding: 5px;
+    position: relative;
+    
+  }
+  header nav a::after{
+    position: absolute;
+    content: '';
+    width: 0px;
+    max-width: 100%;
+    height: 1px;
+    border-radius: 50px;
+   bottom: 5px;
+    left: 5px;
+    background: var(--background-color-two);
+    transition: var(--transition-1);
+  }
+  header nav a:hover::after{
+    width: 15px;
+  }
+  header nav a:hover{
+    opacity: 0.8;
+  }
+ header nav a.active{
+    opacity: 0.8;
+    color: rgb(11, 204, 162);
+  }
+  nav .control{
+    border: 1px solid #333333af;
+    max-width: 100%;
+    padding:2px 5px;
+    display: flex;
+    border-radius: 30px;
+    z-index: 1;
+    
+
+
+  }
+  nav .control .corntrol-btn{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+    cursor: pointer;
+
+   
+  }
+  nav .control .light{
+    background: #000;
+    transition: var(--transition-1);
+  }
+  nav .control .right{
+    background: #fff;
+    transition: var(--transition-1);
+  }
+
+
+ 
+
+  /* <!-- =================================================
+  --------------Main start here------------------
+  =================================================   --> */
+  #indexMenu{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    
+  }
+  #indexMenu .index-left{
+    max-width: 100%;
+    width: 70%;
+    min-height: 100vh;
+    background:var(--background-color) ;
+    position: relative;
+  }
+  
+
+  .slider-container-three{
+    width: 69%;
+    max-width: 100%;
+    height: 104vh;
+    position: fixed;
+    padding: 10px;
+    top: 5px;
+    left: 10px;
+    
+   
+}
+
+.slide-three{
+    width: 100%;
+    max-width: 100%;
+	height: calc(100% - 30px);
+	position: relative;
+	overflow: hidden;
+    background-color: #fff;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-three img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-three  img:not(.active){
+    top: 0;
+	left: -100%;
+}
+.slider-container-three .buttons .right{
+    background: #ffffff13;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: var(--font-h4);
+    cursor: pointer;
+    transition: var(--transition-2)
+}
+.slider-container-three .buttons .left{
+    background: #ffffff13;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: var(--font-h4);
+    cursor: pointer;
+    transition: var(--transition-2)
+
+}
+.buttons .left:hover,
+.buttons .right:hover{
+    background-color: #eee;
+    opacity: 0.4;
+    color: black;
+}
+
+.slider-container-three .dots{
+    position: absolute;
+    max-width: 100%;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    z-index: 2;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+   
+}
+.slider-container-three .dots .dot{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(168, 161, 161);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+.dot.active{
+    background: #fff;
+}
+
+
+.index-card{
+    width: 460px;
+    height: auto;
+    max-width: 100%;
+    position: absolute;
+    z-index: 3;
+    background: var(--background-color);
+    padding: 25px 40px;
+    bottom: 80px;
+    left: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    filter: drop-shadow(0 10px 20px #0009); 
+
+
+}
+.index-card h1{
+    font-size: var(--font-h1);
+    line-height: 50px;
+    text-align: center;
+    max-width: 100%;
+    font-weight: 400;
+    margin-top: 25px;
+    color: var(--text-color);
+}
+.index-card p{
+    font-size: var(--font-15);
+    margin: 15px auto;
+    line-height: 25px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+.index-card .index-card-content{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+}
+.index-card-content img{
+    max-width: 100%;
+    width: 120px;
+}
+.index-card-content span{
+    max-width: 100%;
+    font-size: var(--font-h3);
+    font-family: "Sorts Mill Goudy", serif;
+    color: var(--text-color);
+}
+.index-card-content  .index-content-stars{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.index-content-stars .stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-15);
+    color: rgb(255, 153, 0);
+}
+.index-content-stars p{
+    margin-top: 5px;
+}
+
+ .since{
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    max-width: 100%;
+    padding: 15px 25px;
+    background: #ffffff49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 50px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    
+}
+.since i,
+.since p{
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 400
+}
+
+
+/* ====================================index right start here==================== */
+
+  #indexMenu .index-right{
+    max-width: 100%;
+    width: 30%;
+    min-height: 100vh;
+    background:var(--background-color) ;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 5px 30px;
+    padding: 0 5px;
+  }
+ 
+  .restaurent{
+    padding: 0px 5px 10px 0px;
+    background-color: var(--extra-color);
+    border-radius: 15px;
+  }
+
+  #restaurent{
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    background-image: url(/photos/restaurent\ \(1\).webp);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: var(--transition-2);
+  
+   
+   
+  }
+  #menu{
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    background-image: url(/photos/restaurent\ \(2\).webp);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: var(--transition-2);
+
+  }
+  button{
+    max-width: 100%;
+    background: var(--background-color);
+    padding: 10px 8px 12px;
+    border-radius: 15px 0px 25px 0;
+    position: relative;
+    font-size: var(--font-15);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    transition: var(--transition-2);
+    z-index: 2;
+    font-weight: 500;
+  }
+  button::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 50px;
+    background-color:var(--background-color);
+    bottom: 15px;
+    border-bottom-left-radius: 30px;
+    right: 9px;
+    
+    box-shadow:  -20px 30px 0 var(--primary-c);
+    transform: rotate(-90deg);
+  }
+  button::before{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 50px;
+    background-color:var(--background-color);
+    top: 5px;
+    border-bottom-left-radius: 32px;
+    left: -50px;
+    box-shadow:  -10px 30px 0 var(--primary-c);
+    transform: rotate(-90deg);
+  }
+
+
+
+
+  #restaurent button i,
+  #menu button i{
+    opacity: 0;
+    color: var(--text-color);
+    font-size: var(--font-14);
+    display: block;
+    transition: var(--transition-2);
+   
+  }
+  #restaurent:hover button i,
+  #menu:hover button i{
+    opacity: 1;
+  }
+
+  #restaurent:hover button,
+  #menu:hover button{
+    padding: 10px 20px;
+  }
+
+  #restaurent:hover::before,
+  #menu:hover::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter:blur(5px) ;
+    transition: var(--transition-2);
+    border-radius: 15px;
+   
+  }
+
+  .book-table{
+    max-width: 100%;
+    width: 99%;
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 15px 0 0;
+    opacity: 1;
+    transition: var(--transition-1);
+  }
+  .book-table ,
+  .book-table i{
+    color: var(--text-color-two);
+    text-transform: capitalize;
+    font-size: var(--font-15);
+  }
+  .book-table:hover{
+    padding: 25px 35px;
+  }
+
+  .opening-hour{
+    max-width: 100%;
+    width: 99%;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    position: relative;
+    background: var(--extra-color);
+    padding: 10px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-1);
+    border: 1px solid #3333331f;
+    border-radius: 10px;
+   
+    gap: 15px;
+  }
+  .opening-hour:hover li{
+    padding:  0 25px;
+
+  }
+  .opening-hour h5{
+    font-size: var(--font-h5);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
+  .opening-hour li{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding:  0 20px;
+    transition: var(--transition-1);
+  }
+  .opening-hour li p{
+    font-size: var(--font-15);
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .social-links{
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+    margin-bottom: 50px;
+  }
+  .social-links .twitter,
+  .social-links .instagram{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
+    background: var(--extra-color);
+    border-radius: 15px;
+    border: 1px solid #3333331f;
+    transition: var(--transition-1);
+  }
+  .social-links:hover .twitter,
+  .social-links:hover .instagram{
+    padding: 20px 35px;
+
+  }
+  .social-links .twitter:hover p,
+  .social-links .instagram:hover p{
+    opacity: 0.9;
+    
+
+  }
+  .social-links .twitter p,
+  .social-links .instagram p{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    opacity: 1;
+  }
+  .social-links .twitter i,
+  .social-links .instagram i{
+    color: var(--text-color);
+  }
+
+
+/* 
+  <!-- =================================================
+  --------------footer start here------------------
+  =================================================   --> */
+
+  #footer{
+    max-width: 100%;
+    width: 100%;
+    background: var(--extra-color);
+    margin:  0 auto 30px;
+    border-radius: 10px 10px 0 0;
+    padding:35px 15px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+  }
+  #footer .footer-link{
+    max-width: 100%;
+    text-align: center;
+  }
+  .footer-link h3{
+    font-size: var(--font-h3);
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  .footer-link li{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-link li a{
+    font-size: var(--font-15);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px;
+    transition: var(--transition-1);
+  }
+  .footer-link li a:hover{
+    opacity: 0.7;
+  }
+  .footer-link li a.active{
+    color: rgb(11, 204, 162);
+
+  }
+ 
+
+#footer .cpywrites{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.cpywrites i{
+  font-size: var(--font-15);
+}
+.cpywrites p{
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cpywrites p span{
+  text-decoration: underline;
+}
+
+
+
+
+/* 
+  <!-- =================================================
+  --------------menu start here------------------
+  =================================================   --> */
+
+
+
+
+
+
+#indexMenu .menu-left .index-card,
+#indexMenu .about-left .index-card,
+#indexMenu .restaurent-left .index-card,
+#indexMenu .reservation-left .index-card{
+  width: 460px;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  z-index: 3;
+  background: var(--background-color);
+  padding: 25px 30px;
+  bottom: 30px;
+  left: 10px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  filter: drop-shadow(0 10px 20px #0009); 
+
+}
+#indexMenu .menu-left{
+  width: 50%;
+  max-width: 100%;
+  min-height: 95vh;
+  background:var(--background-color) ;
+  position: relative;
+  background-image: url(/photos/restaurent\ \(2\).webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+ 
+
+}
+#indexMenu .reservation-left{
+  width: 70%;
+  max-width: 100%;
+  min-height: 95vh;
+  background:var(--background-color) ;
+  position: relative;
+  background-image: url(/photos/reservation.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+ 
+
+
+}
+
+#indexMenu .about-left{
+  width: 50%;
+  max-width: 100%;
+  min-height: 95vh;
+  background:var(--background-color) ;
+  position: relative;
+  background-image: url(/photos/aboutimg\ \(2\).webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+ 
+
+}
+#indexMenu .restaurent-left{
+  width: 70%;
+  max-width: 100%;
+  min-height: 95vh;
+  background:var(--background-color) ;
+  position: relative;
+  background-image: url(/photos/restaurent\ \(1\).webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+ 
+
+}
+#indexMenu .menu-right{
+  max-width: 100%;
+  width: 50%;
+  min-height: 100vh;
+  background:var(--background-color) ;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1px 15px 30px;
+  padding: 5px;
+  border-radius: 15px;
+
+
+}
+
+.menu-right .menu-section{
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 5px;
+  position: relative;
+}
+.menu-section h2{
+  font-size: var(--font-h2);
+  
+  padding: 25px;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-weight: 400;
+
+}
+.menu-section p{
+  font-size: var(--font-15);
+  padding:5px 25px;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.pasta,
+.pizza,
+.dessert{
+  max-width: 100%;
+}
+.menu-pointer{
+  background: var(--extra-color);
+  max-width: 100%;
+  width: 95%;
+ margin: 15px ;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #33333321;
+  border-radius: 5px;
+}
+.menu-pointer p{
+  font-size: var(--font-15);
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.menu-pointer i{
+  font-size: var(--font-15);
+  transition: var(--transition-1);
+}
+.menu-pointer:hover i{
+  margin-top: 15px;
+}
+
+.menu-card-container{
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.menu-card-container .menu-card{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--extra-color);
+  padding: 15px 10px;
+  border-radius: 15px
+
+}
+
+.menu-card .menu-img{
+  width: 250px;
+  max-width: 100%;
+  border-radius: 10px;
+  position: relative;
+  transform: scale(1);
+}
+.menu-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  
+ 
+}
+.menu-img:hover img{
+  transform: scale(1.01);
+ 
+}
+.menu-card .menu-info{
+  max-width: 100%;
+  width: 70%;
+  position: relative;
+}
+.menu-info h4{
+  font-size: var(--font-h4);
+  font-weight: 500;
+  margin-left: 20px;
+  color: var(--text-color);
+}
+.menu-info p{
+ 
+  width: 90%;
+  margin-right: 15px;
+  color: var(--text-color);
+  font-size: var(--font-14);
+  opacity: 0.7;
+}
+.menu-info .menu-price{
+  max-width: 100%;
+}
+.menu-price h4{
+  font-size: var(--font-h4);
+  padding-right: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+
+}
+
+
+
+/* 
+<!-- =================================================
+--------------about start here------------------
+=================================================   --> */
+
+.about-btn{
+  background: var(--extra-color);
+  max-width: 100%;
+  width: 25%;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 15px;
+  border: 1px solid #ffffff6e;
+  border-radius: 50px 0 10px 0;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  opacity: 1;
+  transition: var(--transition-2);
+}
+.maria-giovanni-img:hover .about-btn{
+  opacity: 0;
+}
+
+.maria-giovanni{
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 2px;
+}
+.maria-giovanni .maria-giovanni-img{
+  position: relative;
+  max-width: 100%;
+  border-radius: 15px;
+  background: var(--extra-color);
+  padding: 5px;
+  transition: var(--transition-2);
+}
+.maria-giovanni-img img{
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.maria-giovanni .maria-giovanni-info{
+  max-width: 100%;
+  padding:25px 35px;
+  width: 98%;
+  background: var(--extra-color);
+  border-radius: 10px;
+}
+.maria-giovanni-info h3{
+  font-size: var(--font-h3);
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 35px;
+  padding: 15px;
+}
+.maria-giovanni-info p{
+  font-size: var(--font-15);
+  color: var(--text-color);
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+/* 
+<!-- =================================================
+--------------restaurent start here------------------
+=================================================   --> */
+
+.address{
+  background: var(--extra-color);
+  width: 98%;
+  max-width: 100%;
+  padding: 30px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.address .adress-card{
+  max-width: 100%;
+
+}
+.adress-card h4{
+  font-size: var(--font-h4);
+  text-transform: capitalize;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+.adress-card p{
+
+  font-size: var(--font-15);
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 20px;
+}
+.adress-card li{
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.adress-card li i{
+  font-size: var(--font-15);
+  color: var(--text-color);
+}
+.adress-card li a{
+  color: var(--text-color);
+  font-size: var(--font-15);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.adress-card li a:hover{
+  opacity: 0.8;
+}
+
+/* 
+  <!-- =================================================
+  --------------RESERVATION start here------------------
+  =================================================   --> */
+  .form-container{
+    max-width: 100%;
+    width: 98.5%;
+    padding: 25px 15px;
+    background: var(--extra-color);
+    border-radius: 10px;
+    margin: 0 auto 25px;
+
+  }
+  .form-container h2{
+    font-size: var(--font-h2);
+    padding: 20px;
+    color: var(--text-color);
+  }
+  .form-container p{
+    font-size: var(--font-15);
+    max-width: 100%;
+    width: 90%;
+    line-height: 25px;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  #form{
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+  #form .input-group{
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .input-group label{
+    font-size: var(--font-h5);
+    font-family: "Sorts Mill Goudy", serif;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 500;
+    opacity: 0.7;
+
+  }
+  .input-group input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding:  15px;
+    font-size: var(--font-15);
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: "Sorts Mill Goudy", serif;
+    background: #3333333b;
+  }
+  .input-group input::placeholder{
+    font-size: var(--font-15);
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 500;
+    opacity: 0.5;
+    color: var(--text-color);
+
+  }
+  #input-btn{
+    max-width: 100%;
+    width: 100%;
+    margin-top:20px ;
+    border-radius: 5px;
+    padding:10px 25px;
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    opacity: 1;
+    transition: var(--transition-1);
+    font-weight: 600;
+    
+  }
+  #input-btn:hover{
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }

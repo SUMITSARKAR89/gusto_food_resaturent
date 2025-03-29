@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The most Authentic Italian experience.">
+    <meta name="title" content="Gusto retaurent website ">
+    <meta property="og:type" content="Gusto retaurent   ">
+    <meta name="keywords" content="Gusto retaurent  ">
+    <meta name="author" content="sumit sarkar">
+
+    <!-- font awesome cdn   --------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- favicon section   --------------------------------->
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/i5cOBg7Cq8s9oFzhtn4fHbXJ34.png" type="image/x-icon">
+
+    <!-- this is Css section   --------------------------------->
+     <link rel="stylesheet" href="asset/CssFile/style.css">
+     <link rel="stylesheet" href="asset/CssFile/responsive.css">
+   
+
+    <!-- this is google font section   --------------------------------->
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- remix icon link   --------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/esm/ionicons.min.js" integrity="sha512-heZj7rPbZHWyOEhE34vsJkzj2DKK2mZ9D3jjMkXQJ0uMGu/m5iOty+le26NL1eFZ5+qa4XBYcflwYwITwCWufw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---swiper js ---------------------------------->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
+    <!-- ---scroll reveal js ---------------------------------->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+
+    <title>Gusto-Restaurent The most Authentic Italian experience</title>
+</head>
+<body>
+     <!-- =================================================
+    --------------header start here------------------
+    =================================================   -->
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Gusto</a>
+        </div>
+        <nav>
+            <a href="menu.html" >menu</a>
+            <a href="reservation.html">reservation</a>
+            <a href="about.html">about</a>
+            <a href="restaurent.html">Restaurent</a>
+            <div class="control">
+                <div class="light corntrol-btn"></div>
+                <div class="dark corntrol-btn"></div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- =================================================
+    --------------Main start here------------------
+    =================================================   -->
+
+    <main id="indexMenu">
+        <div class="index-left">
+            <div class="container">
+                <div class="slider-container-three">
+                    <div class="slide-three">
+                        <img src="photos/slider (1).jpg" class="active img" alt="" srcset="">
+                        <img src="photos/slider (1).webp"  class="img" alt="" srcset="">
+                        <img src="photos/slider (2).webp" class="img" alt="" srcset="">
+                        
+                    </div>
+                    <div class="buttons">
+                        <i class="ri-arrow-left-s-line left"></i>
+                        <i class="ri-arrow-right-s-line right"></i>
+                    </div>
+                    <div class="dots">
+                        <div class="dot active" onclick="changeImage(this)" attr="0"></div>
+                        <div class="dot" onclick="changeImage(this)" attr="1"></div>
+                        <div class="dot" onclick="changeImage(this)" attr="2"></div>
+                       
+                    </div>
+                </div>
+                <div class="since">
+                    <i class="ri-copyright-line"></i>
+                    <p>since 1997</p>
+                </div>
+            </div>
+
+            <div class="index-card">
+                <h1><q>The Best Pasta Outside of Italy</q></h1>
+                <p>“I’m Italian, and let me tell you, this pasta tastes like home. The sauces are rich, the pasta is cooked to perfection, and the ambiance is fantastic. Highly recommend this place!</p>
+                <div class="index-card-content">
+                    <img src="https://framerusercontent.com/images/qO0HYIO3OQHFfjXP6LclPmUAykg.webp" alt="">
+                    <span>4.8</span>
+                    <div class="index-content-stars">
+                        <div class="stars">
+                            <i class="ri-star-s-fill"></i>
+                            <i class="ri-star-s-fill"></i>
+                            <i class="ri-star-s-fill"></i>
+                            <i class="ri-star-s-fill"></i>
+                            <i class="ri-star-s-fill"></i>
+                        </div>
+                        <p>(1,240 Reviews)</p>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+        <div class="index-right">
+           <div class="restaurent">
+            <a href="restaurent.html" id="restaurent">
+                <button>our restaurent <i class="fa-solid fa-arrow-right"></i></button>
+
+            </a>
+           </div>
+           <div class="restaurent">
+            <a href="menu.html" id="menu">
+                <button>menu <i class="fa-solid fa-arrow-right"></i></button>
+
+            </a>
+           </div>
+
+           <a href="reservation.html" class="book-table">
+            <p>book a table</p>
+            <i class="ri-calendar-todo-line"></i>
+           </a>
+
+           <div class="opening-hour">
+            <h5>opening hour</h5>
+            <li>
+                <p style="font-weight: 700;">monday</p>
+                <p style="font-weight: 700;">closed</p>
+            </li>
+            <li>
+                <p>tuesday</p>
+                <p>16:00-22:00</p>
+            </li>
+            <li>
+                <p>wednesday</p>
+                <p>16:00-22:00</p>
+            </li>
+            <li>
+                <p>thursday</p>
+                <p>16:00-22:00</p>
+            </li>
+            <li>
+                <p>friday</p>
+                <p>17:00-22:00</p>
+            </li>
+            <li>
+                <p>sat - sun</p>
+                <p>17:00-22:00</p>
+            </li>
+        
+
+           </div>
+
+           <div class="social-links">
+            <a href="https://x.com/i/flow/login" class="twitter">
+                <p>twitter</p>
+                <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" class="instagram">
+                <p>instagram</p>
+                <i class="ri-instagram-line"></i>
+            </a>
+           </div>
+
+           <div id="footer">
+            <div class="footer-link">
+                <h3><em>menu</em></h3>
+                <li>
+                    <a href="index.html" class="active">home</a>
+                    <a href="menu.html">menu</a>
+                    <a href="about.html">about</a>
+                    <a href="restaurent.html">restaurent</a>
+                    <a href="reservation.html">reservation</a>
+                </li>
+            </div>
+            <div class="footer-link">
+                <h3><em>utility</em></h3>
+                <li>
+                    <a href="index.html">404</a>
+                    <a href="about.html">licensing</a>
+                 
+                </li>
+            </div>
+            <div class="cpywrites">
+                <i class="ri-copyright-line"></i>
+                <p>by <span>sumit sarkar</span></p>
+            </div>
+
+            
+           </div>
+        
+        </div>
+
+
+    </main>
+
+
+    <script>
+        const nextBtn = document.querySelector(".left");
+const prevBtn = document.querySelector(".right");
+const slideImage = document.querySelectorAll(".img"); //image variable
+const dot = document.querySelectorAll(".dot")// dot variable
+const slider = document.querySelector(".slider-container-three")// slider container
+
+
+let counter = 0;
+let length = slideImage.length;
+//1 .next btn
+nextBtn.addEventListener('click', nextSlider);
+function nextSlider(){
+    slideImage[counter].style.animation = "next1 1.5s ease-in-out forwards "
+    // if(counter >= length-1){
+    //     counter = 0;
+    // }else{
+    //     counter++
+    // }
+    counter >= length-1 ? counter = 0 :counter++;
+    slideImage[counter].style.animation = "next2 1.5s ease-in-out forwards ";
+    dotIndecator(); //this is for count dots
+}
+//2 .prev btn
+prevBtn.addEventListener('click', prevSlider);
+function prevSlider(){
+    slideImage[counter].style.animation = "prev1 1.5s ease-in-out forwards"
+    counter == 0 ? counter = length-1 : counter--;
+    slideImage[counter].style.animation = "prev2 1.5s ease-in-out forwards";
+    dotIndecator();//this is for count dots
+}
+
+//3. auto run
+
+function autoRun(){
+    defaultInterval = setInterval(timer, 5000);
+    function timer(){
+        nextSlider();
+        dotIndecator();//this is for count dots
+    }
+};
+autoRun();
+
+//5. resume auto slider
+slider.addEventListener('mouseout', autoRun);
+
+
+//4. stop when mouseover
+slider.addEventListener('mouseover', function(){
+    clearInterval(defaultInterval)
+});
+
+//6. add indecator for count dots
+function dotIndecator(){
+    for( i = 0; i< dot.length; i++){
+        dot[i].className = dot[i].className.replace('active', '')
+    }
+    dot[counter].className += ' active';
+};
+
+//add click to change image
+function changeImage(a){
+    a.classList.add('active'); //select classlist
+    let imageId = a.getAttribute('attr');
+
+    if(imageId > counter){
+        slideImage[counter].style.animation = "next1 1.5s ease-in-out forwards ";
+         counter = imageId;
+        slideImage[counter].style.animation = "next2 1.5s ease-in-out forwards ";
+    }
+    else if(imageId == counter){
+        return;
+    }else{
+        slideImage[counter].style.animation = "prev1 1.5s ease-in-out forwards ";
+         counter = imageId;
+        slideImage[counter].style.animation = "prev2 1.5s ease-in-out forwards ";
+    }
+    dotIndecator();//this is for count dots
+};
+
+    </script>
+    <script src="asset/cssFile/jsFile/main.js"></script>
+</body>
+</html>
