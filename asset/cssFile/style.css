@@ -138,7 +138,7 @@
     body{
         max-width: 100%;
         width: 98.5%;
-        height: auto;
+        height: 100%;
         margin: 10px auto;
         font-family: "Figtree", sans-serif;
         font-size: var(--font-14);
@@ -147,7 +147,7 @@
         position: relative;
         
         transition:  all 0.3s ease-in-out;
-        overflow-X: hidden; 
+        overflow-x: hidden; 
         animation: fadeed 0.5s ease-in-out;
     }
 
@@ -195,18 +195,21 @@
     
 /* ============----page scroll bar-----============== */
 #indexMenu .index-right::-webkit-scrollbar,
-#indexMenu .menu-right::-webkit-scrollbar { 
+#indexMenu .menu-right::-webkit-scrollbar,
+body::-webkit-scrollbar { 
         width: 2px;   
     }
 
     #indexMenu .index-right::-webkit-scrollbar-track,  
-    #indexMenu .menu-right::-webkit-scrollbar-track { 
+    #indexMenu .menu-right::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track { 
         overflow: hidden;
         background-color: var(--scrollbar-color);
     }
 
     #indexMenu .index-right::-webkit-scrollbar-thumb, 
-    #indexMenu .menu-right::-webkit-scrollbar-thumb {
+    #indexMenu .menu-right::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
    
     border-radius:100px;
     background-color: var(--scrollbar-thump);
@@ -241,7 +244,7 @@
   --------------header start here------------------
   =================================================   --> */
   header{
-    position: fixed;
+    position: absolute;
     width: 450px;
     max-width: 100%;
     z-index: 3;
@@ -249,11 +252,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px;
+    margin: 0px;
+    margin-top: -5px;
     padding:5px 15px;
     top: 0;
     left: 10px;
     border-radius:0 0 30px 0;
+    transition: var(--transition-2);
   }
   header::after{
     position: absolute;
@@ -274,7 +279,7 @@
     width: 60px;
     height: 50px;
     background-color: var(--background-color);
-    top: 12px;
+    top: 5px;
     border-bottom-left-radius: 32px;
     left: -41px;
     box-shadow:  -10px 30px 0 var(--primary-c);
@@ -373,7 +378,7 @@
   --------------Main start here------------------
   =================================================   --> */
   #indexMenu{
-    
+    max-width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -399,6 +404,7 @@
     padding: 10px;
     top: 5px;
     left: 10px;
+    overflow: hidden;
     
    
 }
@@ -503,6 +509,8 @@
     align-items: flex-start;
     gap: 10px;
     filter: drop-shadow(0 10px 20px #0009); 
+    transition: var(--transition-1);
+    opacity: 1;
 
 
 }
@@ -596,17 +604,27 @@
     margin: 10px 5px 30px;
     padding: 0 5px;
   }
+  .index-right .indexCardmain{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
  
   .restaurent{
     padding: 0px 5px 10px 0px;
     background-color: var(--extra-color);
     border-radius: 15px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
   }
 
   #restaurent{
     max-width: 100%;
     width: 100%;
-    height: 150px;
+    height: 100%;
     background-image: url(/photos/restaurent\ \(1\).webp);
     background-position: top center;
     background-size: cover;
@@ -622,7 +640,7 @@
   #menu{
     max-width: 100%;
     width: 100%;
-    height: 150px;
+    height: 100%;
     background-image: url(/photos/restaurent\ \(2\).webp);
     background-position: top center;
     background-size: cover;
@@ -779,7 +797,7 @@
 
   .social-links{
    max-width: 100%;
-   width: 100%;
+   width: 98%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -829,7 +847,7 @@
 
   #footer{
     max-width: 100%;
-    width: 100%;
+    width: 98%;
     background: var(--extra-color);
     margin:  0 auto 30px;
     border-radius: 10px 10px 0 0;
@@ -928,6 +946,7 @@
   align-items: flex-start;
   gap: 10px;
   filter: drop-shadow(0 10px 20px #0009); 
+  transition: var(--transition-2);
 
 }
 #indexMenu .menu-left{
@@ -993,13 +1012,14 @@
   width: 50%;
   min-height: 100vh;
   background:var(--background-color) ;
-  overflow-y: scroll;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 1px 15px 30px;
   padding: 5px;
   border-radius: 15px;
+  margin: 0 auto;
 
 
 }
@@ -1033,12 +1053,14 @@
 .pizza,
 .dessert{
   max-width: 100%;
+  margin: 0 auto;
 }
 .menu-pointer{
   background: var(--extra-color);
   max-width: 100%;
-  width: 95%;
- margin: 15px ;
+  width: 100%;
+ margin: 15px auto ;
+ 
   padding: 0px 15px;
   display: flex;
   justify-content: space-between;
@@ -1302,6 +1324,7 @@
     align-items: center;
     gap: 8px;
     position: relative;
+    transition: var(--transition-1);
   }
   #form .input-group{
     max-width: 100%;
