@@ -205,6 +205,11 @@
         width: 100%;
 
     }
+    #menu-btn{
+      top: -7px;
+      opacity: 1;
+      position: fixed;
+    }
     .menu-card .menu-info{
         width: 90%;
         padding-top: 15px;
@@ -228,7 +233,7 @@
       
       }
       header{
-        width: 150px;
+        width: 130px;
         position: fixed;
       }
       header nav a:nth-child(2),
